@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Dearest Sister Leela Surya Kumari! 🌸🎂</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- WhatsApp & Social Media Preview Meta Tags (Open Graph) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A Special Birthday Surprise for Leela Surya Kumari! 🎂💗" />
+  <meta property="og:description" content="Someone special has created a surprise just for you... Tap to open your gift! 💌" />
+  <meta property="og:image" content="assets/photos/photo1.jpg" />
+  <meta name="theme-color" content="#f472b6" />
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================================================================
+       💌 FULL-SCREEN WELCOME PAGE / SURPRISE INTRO
+       =================================================================== -->
+  <aside class="welcome-screen" id="welcomeScreen" aria-label="Birthday Welcome Surprise">
+    <div class="welcome-petals-container" id="welcomePetals"></div>
+
+    <div class="welcome-card">
+      <div class="welcome-icon-box">
+        <span>💌</span>
+      </div>
+      <h1 class="welcome-title">
+        Hey Leela Surya Kumari! <span class="welcome-heart">💗</span>
+      </h1>
+      <p class="welcome-subtitle">
+        Someone special has created a surprise just for you...
+      </p>
+      <button class="btn-open-surprise" id="openSurpriseBtn" type="button">
+        <span>💌</span> Open Your Surprise 💌
+      </button>
+      <p class="welcome-hint">
+        ✨ Turn your volume up for a special birthday melody! 🎶
+      </p>
+    </div>
+  </aside>
+
+  <!-- Floating Decorative Background -->
+  <div class="floating-elements" id="floatingContainer"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span>🌸</span> Leela Surya Kumari
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#countdown" class="nav-link">Countdown ⏳</a></li>
+        <li><a href="#memories" class="nav-link active">Memories 💗</a></li>
+        <li><a href="#cake" class="nav-link">Birthday Cake</a></li>
+        <li><a href="#letter" class="nav-link">Letter to Akka</a></li>
+        <li><a href="#highlights" class="nav-link">Why You're Special</a></li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <button class="nav-audio-btn" id="musicToggleBtn" title="Play birthday background melody" type="button">
+          🎵 Play Birthday Melody
+        </button>
+        <button class="nav-audio-btn" id="replaySurpriseBtn" title="Replay the welcome surprise intro" type="button" style="background: var(--cream-100);">
+          💌 Replay Intro
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         🎉 HERO SECTION
+         =================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="badge-tag">
+          <span>✨</span> Celebrating the World's Sweetest Elder Sister <span>✨</span>
+        </div>
+        <h1 class="hero-title">
+          Happy Birthday to My Amazing Sister
+          <span class="hero-sister-name">Leela Surya Kumari</span>
+        </h1>
+        <p class="hero-subtitle">
+          Thank you for filling our family with warmth, grace, wisdom, and unconditional love.
+          Today is all about celebrating the wonderful, inspiring person you are! 💖
+        </p>
+        <div class="hero-actions">
+          <a href="#memories" class="btn-primary">
+            <span>📷</span> View Our Memories 💗
+          </a>
+          <button class="btn-secondary" id="showerLoveBtn" type="button">
+            <span>🎉</span> Shower Love & Confetti
+          </button>
+          <a href="#cake" class="btn-secondary">
+            <span>🎂</span> Cut Birthday Cake
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ⏳ BIRTHDAY COUNTDOWN SECTION
+         =================================================================== -->
+    <section class="countdown-section" id="countdown">
+      <div class="container">
+        <div class="countdown-wrapper">
+          <h2 class="countdown-header">Countdown to Akka's Special Day ⏳🎂</h2>
+          <p class="countdown-subtext">Counting down every second of love, blessings & celebration for Leela Surya Kumari ✨</p>
+          
+          <div class="countdown-grid">
+            <div class="countdown-card">
+              <span class="countdown-number" id="countdownDays">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-card">
+              <span class="countdown-number" id="countdownHours">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-card">
+              <span class="countdown-number" id="countdownMinutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-card">
+              <span class="countdown-number" id="countdownSeconds">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="countdown-banner" id="countdownBanner">
+            🎉 Today is Akka's Special Day! Happy Birthday, Leela Surya Kumari! 🥳💖
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         🌸 STAR SECTION: "Our Beautiful Memories 💗" PHOTO GALLERY
+         =================================================================== -->
+    <section class="gallery-section" id="memories">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="gallery-header">
+          <span class="gallery-badge">One-By-One Photographic Memories</span>
+          <h2 class="gallery-heading">
+            Our Beautiful Memories <span class="heart-icon">💗</span>
+          </h2>
+          <p class="gallery-subtitle">
+            Reliving cherished moments with my dearest elder sister Leela Surya Kumari, one memory at a time ✨
+          </p>
+        </div>
+
+        <!-- 📸 ONE-BY-ONE MEMORY SPOTLIGHT STAGE -->
+        <div class="memory-stage-wrapper" id="memoryStage">
+          <div class="memory-stage-aura"></div>
+
+          <!-- Stage Toolbar -->
+          <div class="stage-toolbar">
+            <span class="stage-counter-badge" id="stageCounter">Memory 1 of 6 💗</span>
+            
+            <div class="stage-nav-controls">
+              <button class="stage-btn" id="stagePrevBtn" type="button" title="Previous Memory (Left Arrow)">
+                <span>❮</span> Prev
+              </button>
+              <button class="stage-btn primary" id="stagePlayBtn" type="button" title="Play / Pause Slideshow">
+                <span>▶</span> Play Slideshow
+              </button>
+              <button class="stage-btn" id="stageNextBtn" type="button" title="Next Memory (Right Arrow)">
+                Next <span>❯</span>
+              </button>
+            </div>
+
+            <!-- Slideshow Progress Bar -->
+            <div class="stage-progress-container" title="Time to next memory">
+              <div class="stage-progress-bar" id="stageProgressBar"></div>
+            </div>
+          </div>
+
+          <!-- Polaroid Spotlight Frame -->
+          <div class="stage-polaroid-frame">
+            <div class="stage-washi-tape"></div>
+
+            <!-- Photo Viewport (Displays Full Photo Without Unnecessary Cropping) -->
+            <div class="stage-photo-viewport" id="stageViewport" title="Click to view full screen">
+              <img src="assets/photos/photo1.jpg" alt="Leela Surya Kumari Photo 1" class="stage-real-photo" id="stageRealPhoto" />
+              <span class="stage-zoom-cue">🔍 Click to Enlarge</span>
+            </div>
+
+            <!-- Photo Footer: Editable Caption & Date -->
+            <div class="stage-footer" id="stageFooter">
+              <div class="stage-caption-container">
+                <div class="stage-caption-text" id="stageCaption" contenteditable="true" spellcheck="false" title="Click to edit caption"></div>
+                <span style="opacity: 0.5; font-size: 0.85rem; cursor: pointer;" title="Editable caption">✏️</span>
+              </div>
+              <div class="stage-date-tag" id="stageDate"></div>
+            </div>
+
+            <!-- 💌 Special Finale Card (After 6th Photograph) -->
+            <div class="stage-finale-card" id="stageFinaleCard">
+              <span class="finale-heart-icon">❤️</span>
+              <span class="finale-badge">A Heartfelt Note for Akka</span>
+              <h3 class="finale-message">
+                "Six pictures, countless memories, and one forever-special Akka. Love you forever! ❤️"
+              </h3>
+              <button class="finale-replay-btn" id="finaleReplayBtn" type="button">
+                <span>🔄</span> Replay Memories From Start
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Dots Navigation -->
+          <div class="stage-dots-container" id="stageDots"></div>
+
+          <!-- Quick Action Buttons Below Stage -->
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin-top: 2rem; flex-wrap: wrap;">
+            <input type="file" id="addPhotoInput" accept="image/*" style="display: none;" />
+            <button class="btn-gallery-action primary" onclick="document.getElementById('addPhotoInput').click()" type="button">
+              <span>➕</span> Add Photo
+            </button>
+            <button class="btn-gallery-action" onclick="window.toggleGridView()" type="button" id="gridToggleBtn">
+              <span>🖼️</span> View Collage View
+            </button>
+            <button class="btn-gallery-action" onclick="window.showFolderInstructions()" type="button">
+              <span>📁</span> Photo Folder Guide
+            </button>
+          </div>
+
+          <!-- Collapsible Collage / Grid View -->
+          <div id="gridCollapsible" style="display: none; margin-top: 2.5rem;">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <h3 style="font-family: var(--font-serif); color: var(--lavender-deep); font-size: 1.5rem;">All Polaroid Memories Collage 📷</h3>
+            </div>
+            <div class="polaroid-grid" id="polaroidGrid"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         🎂 INTERACTIVE BIRTHDAY CAKE & WISHES SECTION
+         =================================================================== -->
+    <section class="celebration-section" id="cake">
+      <div class="container">
+        <div class="cake-card">
+          <div class="badge-tag">Make A Wish 🌟</div>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--lavender-deep); margin-bottom: 0.5rem;">
+            Blow the Birthday Candle, Akka! 🎂
+          </h2>
+          <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">
+            Close your eyes, make the sweetest wish for your upcoming year, and tap the cake!
+          </p>
+
+          <div class="cake-container" id="interactiveCake" title="Click to blow out the candle">
+            <div class="candle" id="cakeCandle">
+              <span class="candle-flame">🔥</span>
+              <span style="display:block; width:10px; height:32px; background: repeating-linear-gradient(45deg, #f472b6, #f472b6 6px, #fff 6px, #fff 12px); border-radius: 4px; margin: 0 auto;"></span>
+            </div>
+            <div class="cake-emoji">🎂</div>
+            <span class="cake-prompt" id="cakePrompt">✨ Click the cake to blow the candle! ✨</span>
+          </div>
+
+          <p style="font-size: 0.95rem; color: var(--text-muted); font-style: italic;">
+            "May your life be showered with boundless happiness, radiant health, and grand success!"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         💌 HEARTFELT LETTER TO ELDER SISTER
+         =================================================================== -->
+    <section class="letter-section" id="letter">
+      <div class="container">
+        <div class="letter-card">
+          <div class="letter-stamp">
+            <span class="letter-stamp-icon">💌</span>
+            <span>FOR AKKA</span>
+          </div>
+          <h2 class="letter-title">To My Dearest Sister Leela Surya Kumari,</h2>
+          <div class="letter-body">
+            <p style="margin-bottom: 1.2rem;">
+              Having you as my elder sister is one of the greatest blessings of my life. You have always been my protector, my mentor, and my comforting safe haven through every high and low.
+            </p>
+            <p style="margin-bottom: 1.2rem;">
+              Your kindness, dedication, and gentle smile brighten every corner of our home. I look up to your strength, your perseverance, and the boundless love you give so effortlessly.
+            </p>
+            <p>
+              On this special birthday, I want to say thank you for everything you are and everything you do. May every path you walk lead to prosperity, laughter, and fulfillment. Happy Birthday, Akka!
+            </p>
+          </div>
+          <div class="letter-signature">
+            With endless love & gratitude 💖
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         🌟 SISTER HIGHLIGHTS / TRAITS SECTION
+         =================================================================== -->
+    <section class="traits-section" id="highlights">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--text-primary); margin-bottom: 0.5rem;">
+            Why You Are The Best Sister In The World 🌸
+          </h2>
+          <p style="color: var(--text-secondary);">A few of the countless qualities that make Leela Surya Kumari so special.</p>
+        </div>
+
+        <div class="traits-grid">
+          <div class="trait-card">
+            <span class="trait-icon">👑</span>
+            <h3 class="trait-title">Guiding Role Model</h3>
+            <p class="trait-desc">Inspiring us every single day with your grace, hard work, and calm wisdom.</p>
+          </div>
+
+          <div class="trait-card">
+            <span class="trait-icon">🤗</span>
+            <h3 class="trait-title">Warmest Heart</h3>
+            <p class="trait-desc">Always ready with the gentlest embrace and comforting words when we need it most.</p>
+          </div>
+
+          <div class="trait-card">
+            <span class="trait-icon">💡</span>
+            <h3 class="trait-title">Best Advice Giver</h3>
+            <p class="trait-desc">No problem is too tricky when Akka sits down to listen and guide the way.</p>
+          </div>
+
+          <div class="trait-card">
+            <span class="trait-icon">✨</span>
+            <h3 class="trait-title">Pure Sunshine</h3>
+            <p class="trait-desc">Bringing cheerful laughs, positive energy, and joy wherever you go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       🔍 LIGHTBOX MODAL FOR FULL-SIZE PHOTO VIEW
+       =================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Photo View">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxClose" title="Close (Esc)" type="button">✕</button>
+      
+      <div class="lightbox-image-container">
+        <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrev" title="Previous Photo (Left Arrow)" type="button">❮</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+        <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNext" title="Next Photo (Right Arrow)" type="button">❯</button>
+      </div>
+
+      <div class="lightbox-details">
+        <div class="lightbox-caption" id="lightboxCaption" contenteditable="true" spellcheck="false" title="Click to edit caption"></div>
+        <div class="lightbox-counter" id="lightboxCounter">1 of 6</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Music Player Pill -->
+  <div class="floating-music-pill" id="floatingMusicPill" title="Toggle background birthday song">
+    <span class="music-disc" id="musicDisc">💿</span>
+    <span class="music-text">Play Music 🎵</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Created with infinite love for my elder sister <strong>Leela Surya Kumari</strong> <span class="footer-heart">💗</span></p>
+      <p style="font-size: 0.82rem; margin-top: 0.5rem; opacity: 0.75;">May this year bring you as much happiness as you bring to everyone around you!</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/gallery.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
